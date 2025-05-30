@@ -54,50 +54,153 @@ body {
   background-color: #2563eb;
   color: white;
   padding: 0.8rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 5px;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #1a4ed8;
 }
 
 .hero-image {
   flex: 1;
   min-width: 280px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .hero-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Features Section */
 .features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 2rem;
+  gap: 2rem;
   background-color: #ffffff;
 }
 
-.features h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #1e40af;
+.feature {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f0f4f8;
 }
 
-.features ul {
+.feature h2 {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.feature ul {
   list-style: none;
   padding: 0;
 }
 
-.features li {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
+.feature li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
+.feature li::before {
+  content: '✔'; /* Checkmark icon */
+  color: #2563eb;
+  position: absolute;
+  left: 0;
+}
+
+/* Footer Styles */
 footer {
+  background-color: #333; /* Dark background for footer */
+  color: #fff; /* White text color */
+  padding: 1.5rem 2rem;
   text-align: center;
-  padding: 1rem;
-  background-color: #f3f4f6;
-  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Space between copyright and links */
+}
+
+.footer-links a {
+  color: #a0c4ff; /* Lighter color for links */
+  text-decoration: none;
+  margin: 0 10px; /* Space between links */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Policy Header Styling */
+.policy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1em;
+}
+
+.policy-header h1 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  padding-left: 20px; /* To visually center it better if button is on left */
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #1a4ed8;
+  text-decoration: none;
 }
